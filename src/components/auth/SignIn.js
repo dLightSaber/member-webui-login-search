@@ -48,7 +48,7 @@ export default function SignIn() {
     setLoading(true);
     //axios.post('http://localhost:3000/login', { username: username, password: password }).then(response => {
     //axios.post('/login', { username: username, password: password }).then(response => {
-	  xios.post('http://ec2-18-117-92-0.us-east-2.compute.amazonaws.com:8080/login', {username: username, password: password }).then(response => {	  
+      axios.post('http://ec2-18-117-92-0.us-east-2.compute.amazonaws.com:8080/login', {username: username, password: password }).then(response => {	  
     setLoading(false);
     alert("User login successful");
       history.push('/providers'); 
