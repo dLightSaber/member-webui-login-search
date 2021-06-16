@@ -46,7 +46,8 @@ export default function SignIn() {
      e.preventDefault();
     setError(null);
     setLoading(true);
-    axios.post('http://localhost:3000/login', { username: username, password: password }).then(response => {
+    //axios.post('http://localhost:3000/login', { username: username, password: password }).then(response => {
+    axios.post('/login', { username: username, password: password }).then(response => {
     setLoading(false);
     alert("User login successful");
       history.push('/providers'); 
